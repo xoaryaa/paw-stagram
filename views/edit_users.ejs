@@ -1,0 +1,38 @@
+<%- include('layouts/header') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 mx-auto mt-4">
+            <!-- <h1>Add Users Page</h1> -->
+           
+        </div class="card shadow" >
+        <div class="card-header bg-success">
+            <h3 class="text-light">Edit User(<%= user.name %> )</h3></div>
+            <div class="card-body p-4">
+        <form action="/update/<%= user._id  %> " method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter your name" value="<%= user.name %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter your email" value="<%= user.email %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="caption">Caption</label>
+            <input type="text" name="cap" class="form-control form-control-lg" placeholder="Add caption" value="<%= user.caption %>">
+        </div>
+        <div class="mb-3">
+        <label for="image" class="form-label">Select image</label>
+    <input type="file" class="form-control form-control-lg" name="image" >
+    <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1">
+    </div>
+    <input type="hidden" name="old_image" value="<%= user.image%>">
+    <div class="mb-3 d-grid">
+        <button type="submit" name="submit" value="Update User" class="btn btn-success btn-lg">Update User</button>
+    </div>
+</form>
+    </div></div>
+</div>
+
+<%- include('layouts/footer') %>

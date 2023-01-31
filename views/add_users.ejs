@@ -1,0 +1,33 @@
+<%- include('layouts/header') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Add Users Page</h1>
+           
+        </div>
+        <form action="/add" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+            <label for="caption">Caption</label>
+            <input type="text" name="cap" class="form-control form-control-lg" placeholder="Add caption">
+        </div>
+        <div class="mb-3">
+        <label for="image" class="form-label">Select image</label>
+    <input type="file" class="form-control form-control-lg" name="image" required>
+    </div>
+    <div class="mb-3 d-grid">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+    </div>
+</div>
+
+<%- include('layouts/footer') %>
