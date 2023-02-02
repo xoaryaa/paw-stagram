@@ -5,6 +5,7 @@ require("dotenv").config();
 const express=require("express");
 const mongoose=require("mongoose");
 const session=require("express-session");
+const bcrypt=require('bcrypt');
 
 
 const app=express();
@@ -20,6 +21,7 @@ db.once("open",()=>console.log("CONNECTED TO THE DATABASE"));
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+// app.use(express.static(__dirname + '/public'));
 
 
 
@@ -41,9 +43,9 @@ app.use(express.static('uploads'));
 
 
 app.set('view engine','ejs');
- app.use("",require("./routes/routes"));
+app.use("",require("./routes/routes"));
 
-app.get('/', (req,res)=>{
+app.get('/pawstagram', (req,res)=>{
     res.render("index")
 })
 

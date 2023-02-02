@@ -19,8 +19,9 @@
                         <th>ID</th>
                         <th>name</th>
                         <th>image</th>
-                        <th>email</th>
+                        
                         <th>caption</th>
+                        <th>email</th>
                         <th>action</th>
                     </tr>
                 </thead>
@@ -28,13 +29,14 @@
                    <% users.forEach((user,index)=> {%>
                     <tr class="align-middle">
                         <td>
-                            <%= index %>
+                            <%= index+1 %>
                         </td>
                         <td><%= user.name %> </td>
-                        <td><img src="<%=user.image %> " width="50" class="img-thumbnail" ></td>
+                        <td><img src="<%=user.image %> " width="300" class="img-thumbnail" ></td>
                         
-                        <td><%= user.email %> </td>
+                        
                         <td><%= user.caption %> </td>
+                        <td><%= user.email %> </td>
                         <td>
                             <a href="/edit/<%=user._id%>" class="text-success" ><i class="fas fa-edit fa-lg mx-1"></i></a>
                             <a href="/delete/<%=user._id%>" class="text-danger" ><i class="fas fa-trash fa-lg mx-1"></i></a>
