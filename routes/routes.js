@@ -295,7 +295,7 @@ router.post('/sos',upload, async (req, res) => {
             from: 'tayshetearya@gmail.com',
             to: updatedNgoEmails,
             subject: "Help needed!!!!",
-            text: `sender's email: ${req.body.email}, sender's phone: ${req.body.phone}, sender's address: ${req.body.address}, sender's pincode: ${req.body.pincode} `,
+            text: `sender's email: ${req.body.email}, sender's phone: ${req.body.phone}, sender's address: ${req.body.address}, sender's pincode: ${req.body.pincode} , type of animal: ${req.body.animalname}`,
             // html: '<img class="img-fluid" src="https://www.linkpicture.com/q/paw.jpg">',
             attachments : [
                 {
