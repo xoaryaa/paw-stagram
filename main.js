@@ -12,7 +12,7 @@ const app=express();
 const PORT=process.env.PORT|| 5000;
 
 
-mongoose.connect(process.env.DB_URI, {useNewUrlParser:true, useUnifiedTopology:true});
+mongoose.connect(process.env.ATLAS_URI, {useNewUrlParser:true, useUnifiedTopology:true});
 const db=mongoose.connection;
 db.on("error",(error)=> console.log(error));
 db.once("open",()=>console.log("CONNECTED TO THE DATABASE"));

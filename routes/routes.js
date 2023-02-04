@@ -40,7 +40,7 @@ router.post('/add', upload, (req, res) => {
         } else {
             req.session.message = {
                 type: "success",
-                message: "User added succesfully!",
+                message: "Post added succesfully!",
             };
             res.redirect("/pawstagram");
         }
