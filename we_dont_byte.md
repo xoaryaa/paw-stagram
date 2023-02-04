@@ -7,9 +7,9 @@
 </h1>
 
 <div align="center">
-   <strong>Project Name</strong> - One Sentence Description of your project<br>
-  CoC Inheritance 2022 || Team Name <br> <br>
-  Add any <a href="https://shields.io/">Shields</a> here
+   <strong>PAW-WORLD</strong> -An attempt to bring together animal lovers<br>
+  CoC Inheritance 2022 || WE DONT BYTE <br> <br>
+  
 </div>
 <hr>
 
@@ -48,7 +48,7 @@ Our site stimulates co-operation between the users and the NGOs that are dedicat
 
 - [GitHub Repository](https://github.com/xoaryaa/paw-stagram)
 - [Drive Link to Screenshots of your project](https://drive.google.com/drive/u/0/folders/18GDyVr_rgMHnz-6PHbo7ldhalTn6KKbX)
-- [Hosted Website Link]()
+- [Hosted Website Link](https://paw-world.up.railway.app/)
 
 
 
@@ -60,6 +60,7 @@ Our site stimulates co-operation between the users and the NGOs that are dedicat
 - HTML
 - CSS
 - JavaScript
+- EJS
 
 
 #### Back-end
@@ -119,6 +120,12 @@ cd paw-stagram
 
 ```bash
 npm install
+```
+
+4. Start the server
+
+```bash
+npm start
 ```
 
 
